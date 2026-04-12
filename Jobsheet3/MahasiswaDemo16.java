@@ -25,6 +25,7 @@ public class MahasiswaDemo16 {
         arrayOfMahasiswa16[i].ipk = Float.parseFloat(dummy);
         System.out.println("------------------------------------");
     }
+    
     for (int i=0;i<arrayOfMahasiswa16.length;i++){
         arrayOfMahasiswa16[i].CetakInfo();
     }

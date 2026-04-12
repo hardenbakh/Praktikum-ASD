@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commid | Liquid Glass Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="liquid-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <section id="login-view" class="active">
+        <div class="glass-card login-container">
+            <h1 class="logo-commid">COMMID</h1>
+            <p class="tagline">PORTFOLIO ACCESS CONTROL</p>
+            
+            <div class="input-group">
+                <input type="text" id="user" required placeholder=" ">
+                <label>Access Identity</label>
+            </div>
+            <div class="input-group">
+                <input type="password" id="pass" required placeholder=" ">
+                <label>Passcode</label>
+            </div>
+            
+            <button class="btn-main" onclick="handleLogin()">AUTHENTICATE</button>
+            <p class="auth-footer">Terminal v4.0.2 - Encrypted Connection</p>
+        </div>
+    </section>
+
+    <section id="dashboard-view">
+        <div class="dashboard-wrapper glass-card">
+            <aside class="sidebar">
+                <h2 class="logo-commid-small">COMMID</h2>
+                <nav>
+                    <button class="nav-item active" onclick="showSection('identity', this)">Identitas</button>
+                    <button class="nav-item" onclick="showSection('portfolio', this)">Portofolio</button>
+                    <button class="nav-item" onclick="showSection('gallery', this)">Gambar</button>
+                </nav>
+                <button class="btn-logout" onclick="handleLogout()">LOGOUT</button>
+            </aside>
+
+            <main class="content-area">
+                <div id="identity" class="section active">
+                    <div class="profile-header">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="Avatar" class="avatar">
+                        <div>
+                            <h2 class="neon-title">Muqri "Commid" Tech</h2>
+                            <span class="badge">System Architect & AI Prompter</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bio-content">
+                        <p>
+                            Saya adalah seorang pengembang yang berfokus pada integrasi estetika visual dan fungsionalitas sistem. Dengan spesialisasi pada arsitektur 
+                            <strong>Full-Stack</strong> dan desain <strong>UI/UX</strong> modern, saya memiliki kemampuan teknis dalam membangun aplikasi yang tidak hanya berperforma tinggi, 
+                            tetapi juga memberikan pengalaman pengguna yang intuitif. Setiap baris kode yang saya tulis didasarkan pada prinsip efisiensi dan skalabilitas.
+                        </p>
+                        <p>
+                            Dunia teknologi berkembang secepat kilat, dan saya adalah tipe individu yang selalu haus akan tantangan baru. Saya secara konsisten mengeksplorasi teknologi mutakhir—mulai dari 
+                            implementasi <strong>Artificial Intelligence</strong> hingga optimasi <strong>Cloud Infrastructure</strong>. Bagi saya, proses belajar adalah perjalanan tanpa henti; 
+                            saya tidak pernah merasa cukup dengan apa yang sudah dikuasai dan selalu bersemangat untuk beradaptasi dengan teknologi terbaru.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="portfolio" class="section">
+                    <h2 class="section-title">Current Projects</h2>
+                    <div class="project-grid">
+                        <div class="project-card">
+                            <h3>Quantum UI Kit</h3>
+                            <p>Library komponen berbasis glassmorphism untuk ekosistem React modern.</p>
+                        </div>
+                        <div class="project-card">
+                            <h3>Secure-Node V2</h3>
+                            <p>Backend framework dengan sistem keamanan berlapis dan optimasi memori.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="gallery" class="section">
+                    <h2 class="section-title">Visual Gallery</h2>
+                    <div class="image-grid">
+                        <img src="https://picsum.photos/seed/tech1/400/300" class="img-item">
+                        <img src="https://picsum.photos/seed/code2/400/300" class="img-item">
+                        <img src="https://picsum.photos/seed/cyber3/400/300" class="img-item">
+                    </div>
+                </div>
+
+                <footer class="dash-footer">
+                    <p><strong>Commid Interface v2.0.4</strong> | Didesain dengan presisi tinggi menggunakan teknik Liquid Glassmorphism. Antarmuka ini dirancang khusus untuk kenyamanan visual profesional TI dengan dukungan interaksi intuitif dan performa sistem yang optimal.</p>
+                </footer>
+            </main>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
